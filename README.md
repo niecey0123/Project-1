@@ -2,15 +2,15 @@
 
 
 
-Name Of Game: The Big "O" (Obstacle)
+Name Of Game: The Big "O" (Obstacle) Dress Up Game!
 
-Short Description: This game will have a series of obstacles set up. The objective of the game is to click on certian items in the game to trigger an event to have the character "PUFFY" land on a specific platform. If the player succeeds, not only will  they win that round but they would also be able to move to the next level.
+Short Description: Your going on a date! Oh No! They are scheduled to arrive soon and your'e nowhere near ready! Can you be ready for you date and make a good impression? Hmmm Lest find out! Here is a game where you can be fashionable, but only in a certain amount of time! Can you beat the timer!.. There are 2 avatars, one male and one female. Make them your own!, Give them a name, and have fun on this epic adventure. Each Level Will bring you closer to making your 1st impression  more memorable. 
 
 Technologies Used: (HTML,CSS,JavaScript)
 
-WireFrames https://www.figma.com/file/OdoSjrh4rhfIZLZIgXW0qXll/Untitled?node-id=1%3A2;
+WireFrames https://www.figma.com/file/bxtJPqtWjxlCWIahu4JU9EbO/Untitled?node-id=0%3A1;
 
-Anticipated Problems: Getting the character to move in a specific direction , depending on what item is clicked. Trying to include multiple sounds and effects. Also trying to figure out how to create a conditional that will check and see if the character is on the target. 
+Anticipated Problems: Understanding how to utilize the Drag and Drop concept. As well as Finding out how to create an avatar. 
 
 
 Potentional Solution : Doing research!!!
