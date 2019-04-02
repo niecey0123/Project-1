@@ -10,28 +10,17 @@ window.onload = function() {
 	body.appendChild(dress);
 
 	let myHair = ['hair-1','hair-2','hair-3']
+	const hairDiv = document.querySelectorAll('.hStyle')
 	const create_hair_style =()=>{
 		for (let x = 0; x < 3; x++) {
 		let hair =document.createElement('div');
 		hair.className= myHair[x];
-		body.appendChild(hair);
+		hairDiv[x].appendChild(hair);
 		
 	  };
 
 	};
 	create_hair_style();
-
-	const section1 = document.querySelector('#h1');
-	let style1 = document.querySelector('.hair-1');
-	section1.appendChild(style1);
-
-	const section2 = document.querySelector('#h2');
-	let style2 = document.querySelector('.hair-2');
-	section2.appendChild(style2);
-
-	const section3 = document.querySelector('#h3');
-	let style3 = document.querySelector('.hair-3');
-	section3.appendChild(style3);
 
 	let myTop=['top1','top2','top3']
 	const topDivs = document.querySelectorAll('.top');
@@ -46,20 +35,30 @@ window.onload = function() {
 
 	create_top_style();
 
-	// const topSection1 = document.querySelector('#t1');
-	// let crop1 = document.querySelector('.top1');
-	// let crop1 = document.createElement('div');
-	// crop1.className = 'top1'
-	// topSection1.appendChild(crop1);
+ 	let myBottom = ['bottom1','bottom2','bottom3'];
+ 	const midDivs = document.querySelectorAll('.bottom');
+ 	const create_bottom = ()=>{
+ 		for (let z = 0; z < 3; z++) {
+ 			
+ 			let mid_layer = document.createElement('div');
+ 			mid_layer.className = myBottom[z];
+ 			midDivs[z].appendChild(mid_layer);
+ 		};
+	};
+	create_bottom();
 
-	// const top_section2 = document.querySelector('#t2');
-	// let crop2 = document.querySelector('.top2');
-	// top_section2.appendChild(crop2);
 
-	// const top_section3 = document.querySelector('#t3');
-	// let crop3 = document.querySelector('.top3');
-	// top_section3.appendChild(crop3);
-
+	let myAccessories = ['thing1','thing2','thing3'];
+	const lastDivs = document.querySelectorAll('div');
+	const create_accessories = ()=>{
+		for (let a = 0; a < 3 ; a++) {
+			
+			let last_layer = document.createElement('div');
+			last_layer.className= myAccessories[a];
+			lastDivs[a].appendChild(last_layer);
+		};
+	};
+	create_accessories();
 	class avatar {
 		constructor(name,top,bottoms,dress,shoes,hat){
 			this.name = name;

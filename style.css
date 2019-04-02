@@ -26,7 +26,7 @@ img{
 	font-size: 17pt;
 	padding: 5px;
 }
-.item-1{
+/*.item-1{
 	width: 160px;
 	height: 270px;
 	position: absolute;
@@ -35,8 +35,8 @@ img{
 	left: 70%;
 	background-image: url(images/black-dress.png);
 	/*margin-left: 774px;*/
-	animation: sway 6s ease-in-out infinite;
-}
+/*	animation: sway 6s ease-in-out infinite;
+}*/
 /*.paused{
 	 animation-play-state: paused;
 }
@@ -95,32 +95,87 @@ img{
 }
 
 .top1{
- 	width: 100px;
+ 	width: 148px;
  	height: 150px;
  	position: absolute;
  	background-image: url('Images/crop1.png');
 	z-index: 1;
-	top: 440px;
+	top: 0px;
+	left:20px;
 
 }
 .top2{
-	width: 100px;
-	height: 150px;
+	width: 140px;
+	height: 100px;
 	position: absolute;
 	background-image: url('Images/crop2.png');
 	z-index: 1;
-	top: 440px;
+	top: 5px;
 	left: 40%;
 
 }
 .top3{
-	width: 100px;
+	width: 160px;
 	height: 150px;
 	position: absolute;
 	background-image: url('Images/crop3.png');
 	z-index: 1;
-	top: 480px;
-	left: 75%;
+	top: 0px;
+	left: 67%;
+}
+.bottom1{
+	width: 130px;
+	height: 120px;
+	position: absolute;
+	background-image: url('Images/bottom1.png');
+	z-index: 1;
+	top: 180px;
+	left:4%;
+}
+.bottom2{
+	width: 130px;
+	height: 110px;
+	position: absolute;
+	background-image: url('Images/bottom2.png');
+	z-index: 1;
+	top: 180px;
+	left: 40%;
+}
+.bottom3{
+	width: 115px;
+	height: 125px;
+	position: absolute;
+	background-image: url('Images/bottom3.png');
+	z-index: 1;
+	top: 176px;
+	left: 76%;
+}
+.thing1{
+	width: 140px;
+	height: 96px;
+	position: absolute;
+	background-image: url('Images/hat.png');
+	z-index: 1;
+	top: 350px;
+	left:4%;
+}
+.thing2{
+	width: 70px;
+	height: 40px;
+	position: absolute;
+	background-image: url('Images/glasses.png');
+	z-index: 1;
+	top: 370px;
+	left: 45%;
+}
+.thing3{
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	background-image: url('Images/necklace.png');
+	z-index: 1;
+	top: 370px;
+	left: 76%;
 }
 .tops{
 display: flex;
@@ -148,7 +203,7 @@ font-size: 30pt;
 display: flex;
 width: 100%;
 }
-.shoes{
+.accessories{
 display: flex;
 width: 100%;	
 }
