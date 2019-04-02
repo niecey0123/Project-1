@@ -15,4 +15,4 @@ Anticipated Problems: Understanding how to utilize the Drag and Drop concept. As
 
 Potentional Solution : Doing research!!!
 
-ScreenShot of Progect: (https://user-images.githubusercontent.com/47402849/55369867-52262480-54c6-11e9-90db-5e3f64a1cf4f.png)
+ScreenShot of Project: (https://user-images.githubusercontent.com/47402849/55369867-52262480-54c6-11e9-90db-5e3f64a1cf4f.png)
