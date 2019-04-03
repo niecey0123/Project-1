@@ -5,9 +5,10 @@ window.onload = function() {
 	textBlock.className="text-content";
 	body.appendChild(textBlock);
 
-	let dress = document.createElement('div');
-	dress.className= "item-1";
-	body.appendChild(dress);
+	// let dress = document.createElement('div');
+	// dress.className= "item-1";
+	// body.appendChild(dress);
+
 
 	let myHair = ['hair-1','hair-2','hair-3']
 	const hairDiv = document.querySelectorAll('.hStyle')
@@ -30,6 +31,8 @@ window.onload = function() {
 			let top_layer = document.createElement('div');
 			top_layer.className = myTop[y];
 			topDivs[y].appendChild(top_layer);
+
+
 		};
 	};
 
@@ -59,6 +62,23 @@ window.onload = function() {
 		};
 	};
 	create_accessories();
+
+
+	let addOn = document.createElement('div');
+	addOn.className = "mannequin";
+	body.appendChild(addOn);
+	let top1 = document.querySelector('.top1');
+	addOn.addEventListener('click',(e)=>{
+				let xPos = e.clientX - (top1.offsetWidth / 2);
+				let yPos = e.clientY - (top1.offsetheight / 2) ;
+
+				let translate3dVal = "translate3d(" + xPos + "px," + yPos + "px ,0)"
+				top1.style.transform = translate3dVal;
+			});
+
+	
+	console.log(addOn);
+
 	class avatar {
 		constructor(name,top,bottoms,dress,shoes,hat){
 			this.name = name;
@@ -79,8 +99,10 @@ window.onload = function() {
 	const dress1 = document.querySelector('.item-1');
 	let niecey = new avatar("Niecey","I'm really diggin this","Great","Sexy","Fire","Perfect");
 		textBlock.innerHTML = niecey.welcomeGreeting();
+
 		textBlock.addEventListener('click',()=>{
 		textBlock.innerHTML = niecey.compliment1();
+
 		dress1.addEventListener('click',()=>{
 		dress1.classList.toggle('paused');
 		});
