@@ -102,7 +102,9 @@ img{
 	z-index: 1;
 	top: 0px;
 	left:20px;
-	transform: translate3d(2px,2px, 0);
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
+
 
 }
 .top2{
@@ -181,11 +183,22 @@ img{
 .mannequin{
 	border: black solid;
 	background-color: rgba(85,85,85,0.1);
-	width: 160px;
-	height: 150px;
-	left: 53%;
-	top: 30%;
+	width: 90px;
+	height: 130px;
+	left: 56%;
+	top: 33%;
 	position: absolute;;
+	z-index: 1;
+}
+.point{
+	border:black solid;
+	background-color: rgba(255,255,51,0.4);
+	border-radius: 50%;
+	top: 20%;
+	left: 13%;
+	width:10px;
+	height: 15px;
+	position: absolute;
 	z-index: 1;
 }
 .tops{
@@ -228,3 +241,59 @@ width: 100%;
 .slot:hover{
 	background-color: rgba(255,255,51,0.4);
 }
+
+#timer{
+	position: absolute;
+	background-color: white;
+	border:black solid;
+	width: 100px;
+	height: 30px;
+	top: 0;
+	margin-left: 90%;
+	padding: 5px;
+	text-align: center;
+	font-size: 18pt;
+	
+}
+
+.gu-mirror {
+  position: fixed !important;
+  margin: 0 !important;
+  z-index: 9999 !important;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+.gu-hide {
+  display: none !important;
+}
+.gu-unselectable {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

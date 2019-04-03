@@ -65,20 +65,52 @@ window.onload = function() {
 
 
 	let addOn = document.createElement('div');
+	let pointer = document.createElement('div');
+	pointer.className = "point";
 	addOn.className = "mannequin";
+	addOn.appendChild(pointer);
 	body.appendChild(addOn);
 	let top1 = document.querySelector('.top1');
-	addOn.addEventListener('click',(e)=>{
-				let xPos = e.clientX - (top1.offsetWidth / 2);
-				let yPos = e.clientY - (top1.offsetheight / 2) ;
-
-				let translate3dVal = "translate3d(" + xPos + "px," + yPos + "px ,0)"
-				top1.style.transform = translate3dVal;
-			});
-
 	
-	console.log(addOn);
+	top1.addEventListener('click',(evnt)=>{
+		evnt.target.style.transform = "scale(1.1)";
+		dragula([left, right], { revertOnSpill: true });
 
+	});
+
+
+
+
+	// addOn.addEventListener('click',(e)=>{
+	// 	let xPos = e.clientX - (top1.offsetWidth / 2);
+	// 	let yPos = e.clientY - (top1.offsetHeight / 2);
+
+	// 	let translate3dVal = "translate3d(" + xPos + "px," + yPos + "px ,0)"
+	// 	top1.style.transform = translate3dVal;
+
+	// 			// top1.addEventListener('click',()=>{
+	// 			// 	top1.style.backgroundColor = "#FDFF47";
+	// 			// });
+	// });
+
+	let countdown = ()=>{
+		let sec = 30;
+		let time = setInterval(()=>{
+			document.getElementById('timer').innerText ='00:'+ sec;
+			sec--;
+			if (sec < 0) {
+				clearInterval(time);
+				document.getElementById('timer').innerText = 'Ready!';
+				document.getElementById('timer').style.backgroundColor = "#FDFF47";
+			};
+		},1000);
+	}
+	countdown();
+
+	console.log(`top:` + top1.clientTop + "px" + "border");
+	console.log(`left:` + top1.offsetLeft + "px" + "position and margin of element");
+	console.log(`border:` + top1.offsetHeight / 2 + "px");
+	console.log(top1.offsetWidth / 2 + "px");
 	class avatar {
 		constructor(name,top,bottoms,dress,shoes,hat){
 			this.name = name;
