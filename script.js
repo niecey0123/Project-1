@@ -89,6 +89,9 @@ window.onload = function() {
 		compliment3(){
 			return `This ${this.hair} is sooo me!`
 		}
+		compliment4(){
+			return `This ${this.accessory} is Iconic`
+		}
 		mission(){
 			return `I need to find an outfit that would look great for my lunch date! You have 30sec to find a ${this.top} top, 
 			some ${this.bottoms} bottoms, and my cool ${this.accessory}.`
@@ -124,24 +127,28 @@ window.onload = function() {
 					textBlock.style.display = "block";
 					headTarget.style.backgroundImage = "url(images/hairstyle1.png)";
 					headTarget.style.backgroundRepeat = "no-repeat";
-					headTarget.style.backgroundSize = "cover"
-					headTarget.style.backgroundPosition = "center center";
+					headTarget.style.backgroundSize = "cover";
+					headTarget.style.backgroundSize = "200px 200px"
+					headTarget.style.backgroundPosition = "top center";
 				
 				}
 				else if (evnt.target === hair2) {
-					textBlock.innerHTML = niecey2.compliment3();
+					textBlock.innerHTML = niecey3.compliment3();
 					headTarget.style.backgroundImage = " url(images/short-brunnette.png)";
 					headTarget.style.backgroundRepeat = "no-repeat";
-					headTarget.style.backgroundSize = "cover"
-					headTarget.style.backgroundSize = "175px 120px"
-					headTarget.style.backgroundPosition = "top center";
+					headTarget.style.marginLeft = "28px";
+					headTarget.style.backgroundSize = "cover";
+					headTarget.style.backgroundSize = "145px 100px";
+					headTarget.style.backgroundPosition = "center center";
 				}
 				else{
-					textBlock.innerHTML = niecey3.compliment3();
+					textBlock.innerHTML = niecey2.compliment3();
 					headTarget.style.backgroundImage = "url(images/black-long.png)";
 					headTarget.style.backgroundRepeat = "no-repeat";
 					headTarget.style.backgroundSize = "cover"
-					headTarget.style.backgroundSize = "250px 300px"
+					headTarget.style.marginLeft = "25px";
+					headTarget.style.marginTop = "20px";
+					headTarget.style.backgroundSize = "120px 220px"
 					headTarget.style.backgroundPosition = "top center";
 				}
 	 		});
@@ -276,161 +283,63 @@ window.onload = function() {
 	bottom3.className="bottom3 bs";
 
 	let myAccessories = ['thing1','thing2','thing3'];
+	let midTarget = document.querySelector('#mid-point');
+	let neckTarget = document.querySelector('#neck');
 	const lastDivs = document.querySelectorAll('.thing');
 	const create_accessories = ()=>{
 		for (let a = 0; a < 3 ; a++) {
 			
-			let last_layer = document.createElement('div');
-			last_layer.className= myAccessories[a];
-			lastDivs[a].appendChild(last_layer);
+				let last_layer = document.createElement('div');
+				last_layer.className= myAccessories[a];
+				lastDivs[a].appendChild(last_layer);
 
-			lastDivs[a].addEventListener('click',(evnt)=>{
-			evnt.target.style.transform = "scale(1.1)"
+				lastDivs[a].addEventListener('click',(evnt)=>{
+				evnt.target.style.transform = "scale(1.1)"
+					if (evnt.target === thing1) {
+					textBlock.innerHTML = niecey3.compliment4();
+					textBlock.style.display = "block";
+					midTarget.style.backgroundImage = "url('Images/hat.png')";
+					midTarget.style.marginBottom = "50px";
+					midTarget.style.backgroundRepeat = "no-repeat";
+					midTarget.style.marginLeft = "8px";
+					midTarget.style.backgroundSize = "100px 100px"
+					midTarget.style.backgroundSize = "cover"
+					midTarget.style.backgroundPosition = "top center";
+				}
+				else if (evnt.target === thing2) {
+					textBlock.innerHTML = niecey.compliment4();
+					midTarget.style.backgroundImage = " url('Images/glasses.png')";
+					midTarget.style.backgroundRepeat = "no-repeat";
+					midTarget.style.backgroundSize = "cover"
+					midTarget.style.backgroundSize = "70px 50px"
+					midTarget.style.marginTop = "30px";
+					midTarget.style.backgroundPosition = "center center";
+				}
+				else if (evnt.target === thing3){
+					textBlock.innerHTML = niecey2.compliment4();
+					neckTarget.style.backgroundImage = " url('Images/necklace.png')";
+					neckTarget.style.backgroundRepeat = "no-repeat";
+					neckTarget.style.backgroundSize = "cover"
+					neckTarget.style.backgroundSize = "70px 70px"
+					neckTarget.style.backgroundPosition = "top center";
+				}
 	
 	 		});
 		};
 	};
 	create_accessories();
 
-	// 	class avatar {
-	// 	constructor(name,top,bottoms,accessory){
-	// 		this.name = name;
-	// 		this.top = top;
-	// 		this.bottoms = bottoms;
-	// 		this.accessory = accessory;
-			
-	// 	};
-	// 	welcomeGreeting(){
-	// 	return `Hi!, I'm ${this.name}. Welcome to my room! I have a date in a few and I need your help. Can you get me ready in time?`;
-	// 	};
-	// 	compliment1(){
-	// 		return `I love this ${this.top} top!`
-	// 	}
-	// 	mission(){
-	// 		return `I need to find an outfit that would look great for my lunch date! You have 30sec to find a ${this.top} top, 
-	// 		some ${this.bottoms} bottoms, and my cool ${this.accessory}.`
-	// 	}
-
-	// };
+	let thing1 = document.querySelector('.thing1')
+	thing1.className="thing1 ts";
 
 
-	// let niecey = new avatar("Niecey","Red","Dark Demin","Shades",);
-	// let niecey2 = new avatar("Niecey","White","Cool Grey","Necklace",);
-	// let niecey3 = new avatar("Niecey","Black","Demin Skirt","Hat",);
-
-
-
-	// 	textBlock.innerHTML = niecey.welcomeGreeting();
-	// 	setTimeout(()=>{textBlock.innerHTML = niecey.mission()},4000);
-	// 	setTimeout(()=>{countdown()},6000);
-	// 	setTimeout(()=>{textBlock.style.display = "none"},10000);
-	// const outfits = [top:"ret"]
+	let thing2 = document.querySelector('.thing2')
+	thing2.className="thing2 ts";
 	
 
+	let thing3 = document.querySelector('.thing3')
+	thing3.className="thing3 ts";
 
-
-// 	let tops = document.querySelectorAll('.ts');
-// 	for (let ts = 0;  ts < 3; ts++) {
-// 			console.log(tops[ts]);
-// 			tops[ts].addEventListener('click',(e)=>{
-// 				console.log("clicked");
-
-// 			if (e.target === top1) {
-// 			textBlock.innerHTML = niecey.compliment1();
-// 			textBlock.style.display = "block";
-// 			}
-// 			else if (e.target === top2) {
-// 			textBlock.innerHTML = niecey2.compliment1();
-// 			}
-// 			else{
-// 				textBlock.innerHTML = niecey3.compliment1();
-// 			}
-// 		});
-// }	
-// 	let bottom1 = document.querySelector('.bottom1')
-// 	bottom1.className="bottom1 bs";
-
-// 	console.log(bottom1)
-
-
-// 	let bottom2 = document.querySelector('.bottom2')
-// 	bottom2.className="bottom2 bs";
-// 	console.log(bottom2)
-
-// 	let bottom3 = document.querySelector('.bottom3')
-// 	bottom3.className="bottom3 bs";
-// 	console.log(bottom3)
-
-	// let bottoms = document.querySelectorAll('.bs');
-	// for (let s = 0;  s < 3; s++) {
-	// 		console.log(bottoms[s]);
-			// bottoms[bs].addEventListener('click',(e)=>{
-			// 	console.log("clicked");
-
-
-	let addOn = document.createElement('div');
-	let addOn2 = document.createElement('div');
-	let pointer = document.createElement('div');
-	let pointer2 = document.createElement('div');
-
-	addOn.className = "mannequin-Top";
-	addOn2.className = "mannequin-Bottom";
-	addOn.id = "mannequin_mark";
-	addOn2.id = "mannequin-mark2";
-	pointer.className = "top-point";
-	pointer2.className = "bottom-point";
-
-	addOn.appendChild(pointer);
-	addOn2.appendChild(pointer2);
-	body.appendChild(addOn);
-	body.appendChild(addOn2);
-
-
-// 	let top1 = document.querySelector('.top1')
-// 	top1.className="top1 ts";
-
-
-// 	let top2 = document.querySelector('.top2')
-// 	top2.className="top2 ts";
-	
-
-// 	let top3 = document.querySelector('.top3')
-// 	top3.className="top3 ts";
-
-
-
-// 	let tops = document.querySelectorAll('.ts');
-// 	for (let ts = 0;  ts < 3; ts++) {
-// 			console.log(tops[ts]);
-// 			tops[ts].addEventListener('click',(e)=>{
-// 				console.log("clicked");
-
-// 			if (e.target === top1) {
-// 				console.log('hi')
-// 			}
-// 		});
-// }
-		// let xPos = e.clientX - (tops[ts].offsetWidth / 2);
-		// let yPos = e.clientY - (tops[ts].offsetHeight / 2);
-
-		// let translate3dVal = "translate3d(" + xPos + "px," + yPos + "px ,0)"
-		// tops[ts].style.transform = translate3dVal;
-
-
-
-		
-	// });
-	// // console.log(tops)
-	// let bottom1 = document.querySelector('.bottom1')
-	// addOn2.addEventListener('click',(e)=>{
-	// 	let xPos = e.clientX - (bottom1.offsetWidth / 2);
-	// 	let yPos = e.clientY - (bottom1.offsetHeight / 2);
-
-	// 	let translate3dVal = "translate3d(" + xPos + "px," + yPos + "px ,0)"
-	// 	bottom1.style.transform = translate3dVal;
-
-		
-	// });
 	let countdown = ()=>{
 		let sec = 30;
 		let time = setInterval(()=>{
