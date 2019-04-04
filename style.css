@@ -8,9 +8,13 @@ html {
   background-position: center;
 }
 
-img{
-	margin-left: 45%;
-	margin-top: 10%;
+#avatar{
+	margin-left: 35%;
+	margin-top: 7%;
+	width:490px;
+	height:700px;
+	background-image: url(images/lady-avatar2.png);
+	position: absolute;
 }
 .text-content{
 	background-color: white;
@@ -26,31 +30,7 @@ img{
 	font-size: 17pt;
 	padding: 5px;
 }
-/*.item-1{
-	width: 160px;
-	height: 270px;
-	position: absolute;
-	z-index: 1;
-	top: 31%;
-	left: 70%;
-	background-image: url(images/black-dress.png);
-	/*margin-left: 774px;*/
-/*	animation: sway 6s ease-in-out infinite;
-}*/
-/*.paused{
-	 animation-play-state: paused;
-}
-@keyframes sway{
-	0%{
-	 transform: translateX(0px);
-	}
-	50%{
-		transform: translateX(800px);
-	}
-	100%{
-		transform: translateX(0px;);
-	}
-}*/
+
 .closet{
 	width: 600px;
 	height: 785px;
@@ -61,6 +41,7 @@ img{
 	background:rgba(85,85,85,0.1);
 	border: solid black;
 
+
 }
 .hair-1{
 	width: 150px;
@@ -69,6 +50,8 @@ img{
 	background-image: url(images/hairstyle1.png);
 	z-index: 1;
 	top: 470px;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 	
 }
 .hair-2{
@@ -79,6 +62,8 @@ img{
 	z-index: 1;
 	top: 475px;
 	left: 40%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 
 
 }
@@ -90,6 +75,8 @@ img{
 	z-index: 1;
 	top: 480px;
 	left: 75%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 	
 
 }
@@ -115,6 +102,8 @@ img{
 	z-index: 1;
 	top: 5px;
 	left: 40%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 
 }
 .top3{
@@ -125,6 +114,8 @@ img{
 	z-index: 1;
 	top: 0px;
 	left: 67%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 }
 .bottom1{
 	width: 130px;
@@ -134,6 +125,8 @@ img{
 	z-index: 1;
 	top: 180px;
 	left:4%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 }
 .bottom2{
 	width: 130px;
@@ -143,6 +136,8 @@ img{
 	z-index: 1;
 	top: 180px;
 	left: 40%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 }
 .bottom3{
 	width: 115px;
@@ -152,6 +147,8 @@ img{
 	z-index: 1;
 	top: 176px;
 	left: 76%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 }
 .thing1{
 	width: 140px;
@@ -161,6 +158,8 @@ img{
 	z-index: 1;
 	top: 350px;
 	left:4%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 }
 .thing2{
 	width: 70px;
@@ -170,6 +169,8 @@ img{
 	z-index: 1;
 	top: 370px;
 	left: 45%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 }
 .thing3{
 	width: 70px;
@@ -179,27 +180,55 @@ img{
 	z-index: 1;
 	top: 370px;
 	left: 76%;
+	transform: translate3d(1px,1px, 0);
+	transition: transform .3s ease-in;
 }
-.mannequin{
+#outfit-container{
 	border: black solid;
 	background-color: rgba(85,85,85,0.1);
-	width: 90px;
-	height: 130px;
-	left: 56%;
-	top: 33%;
+	width: 250px;
+	height: 350px;
+	left: 47%;
+	top: 27%;
 	position: absolute;;
 	z-index: 1;
 }
-.point{
-	border:black solid;
-	background-color: rgba(255,255,51,0.4);
-	border-radius: 50%;
-	top: 20%;
-	left: 13%;
-	width:10px;
-	height: 15px;
-	position: absolute;
+#headContainer{
+	border: black solid;
+	background-color: rgba(85,85,85,0.1);
+	width: 200px;
+	height: 140px;
+	left: 48%;
+	top: 8%;
+	position: absolute;;
 	z-index: 1;
+}
+#head-point{
+	border:black solid;
+	background-color: rgba(85,85,85,0.1);
+	left: 13%;
+	width:70%;
+	height: 100%;
+	position: relative;
+}
+#top-point{
+	border:black solid;
+	background-color: rgba(85,85,85,0.1);
+	left: 13%;
+	width:73%;
+	height: 50%;
+	position: relative;
+	
+}
+
+#bottom-point{
+	border:black solid;
+	background-color: rgba(85,85,85,0.1);
+	left: 27%;
+	width:60%;
+	height: 45%;
+	position: relative;
+
 }
 .tops{
 display: flex;
@@ -220,7 +249,8 @@ text-align: center;
 #title-txt{
 margin-top: 10%;
 margin-left: 25%;
-font-size: 30pt;
+font-size: 70pt;
+color: black;
 
 
 }
@@ -255,45 +285,3 @@ width: 100%;
 	font-size: 18pt;
 	
 }
-
-.gu-mirror {
-  position: fixed !important;
-  margin: 0 !important;
-  z-index: 9999 !important;
-  opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
-}
-.gu-hide {
-  display: none !important;
-}
-.gu-unselectable {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  -ms-user-select: none !important;
-  user-select: none !important;
-}
-.gu-transit {
-  opacity: 0.2;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
-  filter: alpha(opacity=20);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
