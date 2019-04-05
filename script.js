@@ -144,7 +144,7 @@ window.onload = function() {
 					headTarget.style.backgroundSize = "cover";
 					headTarget.style.backgroundSize = "200px 200px"
 					headTarget.style.backgroundPosition = "top center";
-					checkObj.hair ="url(images/hairstyle1.png)"
+					checkObj.hair ='Images/hairstyle1.png'
 				
 				}
 				else if (evnt.target === hair2) {
@@ -155,7 +155,7 @@ window.onload = function() {
 					headTarget.style.backgroundSize = "cover";
 					headTarget.style.backgroundSize = "145px 100px";
 					headTarget.style.backgroundPosition = "center center";
-					checkObj.hair =" url(images/short-brunnette.png)"
+					checkObj.hair ='Images/short-brunnette.png'
 				}
 				else{
 					textBlock.innerHTML = niecey2.compliment3();
@@ -166,9 +166,10 @@ window.onload = function() {
 					headTarget.style.marginTop = "20px";
 					headTarget.style.backgroundSize = "120px 220px"
 					headTarget.style.backgroundPosition = "top center";
-					checkObj.hair ="url(images/black-long.png)"
+					checkObj.hair ='Images/black-long.png'
 				}
-				console.log(checkObj)
+				
+				checkForWin(checkObj,outfits)
 	 		});
 		
 	  	};
@@ -209,8 +210,8 @@ window.onload = function() {
 					topTarget.style.backgroundRepeat = "no-repeat";
 					topTarget.style.backgroundSize = "cover"
 					topTarget.style.backgroundPosition = "center center";
-					checkObj.top ="url('Images/crop1.png')"
-					console.log(top1)
+					checkObj.top ='Images/crop1.png'
+					// console.log(top1)
 				}
 				else if (evnt.target === top2) {
 					textBlock.innerHTML = niecey2.compliment1();
@@ -221,7 +222,7 @@ window.onload = function() {
 					topTarget.style.marginLeft= "17px"
 					topTarget.style.backgroundSize = "175px 120px"
 					topTarget.style.backgroundPosition = "top center";
-					checkObj.top =" url('Images/crop2.png')"
+					checkObj.top ='Images/crop2.png'
 				}
 				else{
 					textBlock.innerHTML = niecey3.compliment1();
@@ -230,9 +231,10 @@ window.onload = function() {
 					topTarget.style.backgroundSize = "cover";
 					topTarget.style.backgroundSize = "250px 300px";
 					topTarget.style.backgroundPosition = "top center";
-					checkObj.top =" url('Images/crop3.png')"
+					checkObj.top ='Images/crop3.png'
 				}
-				console.log(checkObj)
+				
+				checkForWin(checkObj,outfits)
 	
 	 		});
 		};
@@ -274,7 +276,7 @@ window.onload = function() {
 					bottomTarget.style.backgroundRepeat = "no-repeat";
 					bottomTarget.style.backgroundSize = "cover"
 					bottomTarget.style.backgroundPosition = "center center";
-					checkObj.bottom ="url('Images/bottom1.png')"
+					checkObj.bottom ='Images/bottom1.png'
 
 				}
 				else if (evnt.target === bottom2) {
@@ -286,7 +288,7 @@ window.onload = function() {
 					bottomTarget.style.backgroundSize = "cover"
 					bottomTarget.style.backgroundSize = "175px 120px"
 					bottomTarget.style.backgroundPosition = "top center";
-					checkObj.bottom ="url('Images/bottom2.png')"
+					checkObj.bottom = 'Images/bottom2.png'
 				}
 				else{
 					textBlock.innerHTML = niecey3.compliment2();
@@ -295,9 +297,10 @@ window.onload = function() {
 					bottomTarget.style.backgroundSize = "cover"
 					bottomTarget.style.backgroundSize = "160px 170px"
 					bottomTarget.style.backgroundPosition = "top center";
-					checkObj.bottom ="url('Images/bottom3.png')"
+					checkObj.bottom ='Images/bottom3.png'
 				}
-				console.log(checkObj)
+				
+				checkForWin(checkObj,outfits)
 	
 	 		});
  		};
@@ -332,7 +335,7 @@ window.onload = function() {
 				lastDivs[a].addEventListener('click',(evnt)=>{
 				evnt.target.style.transform = "scale(1.1)"
 					if (evnt.target === thing1) {
-					textBlock.innerHTML = niecey3.compliment4();
+					textBlock.innerHTML = niecey.compliment4();
 					textBlock.style.display = "block";
 					midTarget.style.backgroundImage = "url('Images/hat.png')";
 					midTarget.style.marginBottom = "50px";
@@ -341,18 +344,17 @@ window.onload = function() {
 					midTarget.style.backgroundSize = "100px 100px"
 					midTarget.style.backgroundSize = "cover"
 					midTarget.style.backgroundPosition = "top center";
-					// checkOutfit(thing1.style.backgroundImage)
-					checkObj.accessory = "url('Images/hat.png')"
+					checkObj.accessory = 'Images/hat.png'
 				}
 				else if (evnt.target === thing2) {
-					textBlock.innerHTML = niecey.compliment4();
+					textBlock.innerHTML = niecey3.compliment4();
 					midTarget.style.backgroundImage = "url('Images/glasses.png')";
 					midTarget.style.backgroundRepeat = "no-repeat";
 					midTarget.style.backgroundSize = "cover"
 					midTarget.style.backgroundSize = "70px 50px"
 					midTarget.style.marginTop = "39px";
 					midTarget.style.backgroundPosition = "center center";
-					checkObj.accessory = "url('Images/glasses.png')"
+					checkObj.accessory = 'Images/glasses.png'
 				}
 
 				else if (evnt.target === thing3){
@@ -363,16 +365,37 @@ window.onload = function() {
 					midTarget.style.marginLeft = "30px";
 					neckTarget.style.backgroundSize = "70px 70px"
 					neckTarget.style.backgroundPosition = "top center";
-					checkObj.accessory = "url('Images/necklace.png')"
+					checkObj.accessory = 'Images/necklace.png'
 				}
-			console.log(checkObj)
+			
+			checkForWin(checkObj,outfits)
 	 		});
 
 		};
 	};
 
+	let anime = document.getElementById('chapter');
+	let checkForWin =(checkObj,outfits)=>{
+		console.log(outfits)
+		console.log(checkObj);
+ 		 for (let i = 0; i < outfits.length; i++) {
+ 		 	
+      		if (outfits[0].top === checkObj.top && 
+      			outfits[0].bottom === checkObj.bottom && 
+      			outfits[0].accessory === checkObj.accessory && 
+      			outfits[0].hair === checkObj.hair) {
+      			textBlock.style.display = "block";
+      			anime.style.display = "block";
 
-	console.log(checkObj)
+      			return textBlock.innerHTML = niecey.congrats();
+      			anime.classList('chapter');
+      			
+      		};
+
+     
+  		};
+	};
+
 	create_accessories();
 
 	let thing1 = document.querySelector('.thing1')
@@ -395,42 +418,22 @@ window.onload = function() {
 				clearInterval(time);
 				document.getElementById('timer').innerText = 'Ready!';
 				document.getElementById('timer').style.backgroundColor = "#FDFF47";
-				
 			};
 		},1000);
 	}
 	
-	
-
-	// let arr =[];
-
-	// const check = ()=>{
-	// 	for (let y = 0; y < outfits.length; y++) {
-	// 	console.log(outfits[y])
-	// 	};
-	// };
-	// check();
-
-	 // const checkOutfit = ()=>{
-	 // 	if (arr.length === 4) {
-	 // 		for (let i = 0; i < arr.length; i++) {
-		//  		console.log(arr[i])
-		//  	}
-	 // 	}
-	 	
-	 // }
-
-   // let winnings =()=>{
-   // 	if (top1 && bottom1 && hair1  && thing1) {
-   // 		return textBlock.innerHTML = niecey.congrats();
-   // 	}
-   // }
-   // winnings();
    
+   let modal = document.getElementById('myModal');
+  	 	anime.addEventListener('click',()=>{
+   		modal.style.display = "block";
+   })
+   let close = document.querySelector('.close');
+   		close.addEventListener('click',()=>{
+   		modal.style.display = "none";
+   })
 
 		
 };
-
 
 
 
