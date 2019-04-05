@@ -259,7 +259,7 @@ width: 100%;
 display: flex;
 width: 100%;
 height: 155px;
-background-color: white;
+background-color: #a8865d;
 text-align: center;
 }
 #title-txt{
@@ -318,7 +318,10 @@ h1{
 	position:absolute;
 	font-size:20pt;
 }
-button:hover{
+#replay a{
+	text-decoration: none;
+}
+#replay:hover{
 	background-color: rgba(0, 255, 0, 0.5);
 	transform: scale(1.5);
 	color: black;
@@ -381,4 +384,7 @@ button:hover{
    	transform: translateX(10px);
    	}
 
+}
+audio{
+	margin-left: 50%
 }

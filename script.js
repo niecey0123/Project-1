@@ -6,7 +6,9 @@ window.onload = function() {
  	const body = document.body;
 
 
-
+     
+     	document.getElementById('audio').play();
+    
 
 
 	let textBlock =document.createElement('div');
