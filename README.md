@@ -19,4 +19,4 @@ ScreenShot of Project: (https://user-images.githubusercontent.com/47402849/55369
 
 
 ##Deploment
-This project is available at : [http://TheBigO.surge.sh/]
+This project is available at : [https://wizardly-hypatia-64b87d.netlify.com]
