@@ -6,10 +6,6 @@ window.onload = function() {
  	const body = document.body;
 
 
-     
-     	document.getElementById('audio').play();
-    
-
 
 	let textBlock =document.createElement('div');
 	textBlock.className="text-content";
@@ -423,7 +419,11 @@ window.onload = function() {
 			};
 		},1000);
 	}
-	
+	 let audio = document.querySelector('#audio');	
+	 let timer = document.querySelector('#timer');
+	 timer.addEventListener('mouseover',()=>{
+	 	audio.play();
+	 })
    
    let modal = document.getElementById('myModal');
   	 	anime.addEventListener('click',()=>{
